@@ -1,29 +1,24 @@
-# Project Name.
+# Web stack debugging #2
 
-**0x12. Web stack debugging #2**
+This was the third in a series of web stack debugging projects. In these
+projects, I was given broken/bugged webstacks in isolated containers,
+and tasked with fixing the web stack to a working state. For each
+task, I wrote a script automating the commands necessary to fix the
+web stack.
 
-## Author's Details.
+## Tasks :page_with_curl:
 
-Name: Augustine Ogwu
+* **0. Run software as another user**
+  * [0-iamsomeonelese](./0-iamsomeonelese): Bash script that runs the command
+  `whoami` under the user passed as argument.
+  * Usage: `./0-iamsomeonelese <user>`
 
-Email: augustineug@gmail.com
+* **1. Run Nginx as Nginx**
+  * [1-run_nginx_as_nginx](./1-run_nginx_as_nginx): Bash script that fixes a
+  web server to run Nginx listening on port `8080` as the `nginx` user.
 
-## Requirements
-
-- Allowed editors: `vi`, `vim`, `emacs`.
-- All your files will be interpreted/compiled on Ubuntu 20.04 LTS.
-- All your files should end with a new line.
-- All your Bash script files must be executable.
-- Your Bash scripts must pass `Shellcheck` without any error.
-- The first line of all your Bash scripts should be exactly `#!/usr/bin/env bash`.
-- The second line of all your Bash scripts should be a comment explaining what is the script doing.
-
-## Project Description.
-
-- **0. Run software as another user** - Write a Bash script that accepts one argument. The script should run the `whoami` command under the user passed as an argument. - `0-iamsomeoneelse`.
-- **1. Run Nginx as Nginx** - Fix this container so that Nginx is running as the `nginx` user. - `1-run_nginx_as_nginx`.
-- **2. 7 lines or less** - Using what you did for task #1, make your fix short and sweet. - `100-fix_in_7_lines_or_less`.
-
-## Collaborate
-
-To collaborate, reach me through my email address wendymunyasi@gmail.com.
+* **2. 7 lines or less**
+  * [100-fix_in_7_lines_or_less](./100-fix_in_7_lines_or_less): Bash script
+  that fixes a web server to run Nginx listening on port `8080` as the `nginx`
+  user.
+  * 7 lines long.

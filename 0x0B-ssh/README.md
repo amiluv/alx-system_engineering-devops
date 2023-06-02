@@ -1,25 +1,42 @@
 # Project Name.
-
 **0x0B. SSH**
 
 ## Author's Details.
+Name: *Florence Coker.*
 
-Name: Augustine Ogwu
+Email: *damselpiccolo18@gmail.com*
 
-Email: augustineug@gmail.com
+Tel:*+2348106314845.*
 
-## Requirements
 
-- Allowed editors: `vi`, `vim`, `emacs`.
-- All your files will be interpreted/compiled on Ubuntu 20.04 LTS.
-- All your files should end with a new line.
-- Your Puppet manifests must pass `puppet-lint` version 2.1.1 without any errors.
-- All your Bash script files must be executable.
-- The first line of all your Bash scripts should be exactly `#!/usr/bin/env bash`.
-- The second line of all your Bash scripts should be a comment explaining what is the script doing.
+# 0X0B-SSH
+![ssh_connection](https://www.ipxo.com/app/uploads/2022/02/What-is-SSH-820x460.jpg)
+
+A __Secure Shell__, or __Secure Socket Shell__, is a network protocol that allows devices to achieve two important things: communicate and share data. Additionally, the SSH protocol also encrypts data, making it ideal for unsecured networks.
+
+## Learning Objectives
+
+- What is a __server__
+- Where servers usually live
+- What is `SSH`
+- How to create an `SSH RSA` key pair
+- How to connect to a remote host using an SSH RSA key pair
+- The advantage of using `#!/usr/bin/env bash` instead of `/bin/bash`
+
+## Projects thought process
+
+
+##  Requirements
+
+*   Allowed editors: `vi`, `vim`, `emacs`.
+*   All your files will be interpreted/compiled on Ubuntu 20.04 LTS.
+*   All your files should end with a new line.
+*   Your Puppet manifests must pass `puppet-lint` version 2.1.1 without any errors.
+*   All your Bash script files must be executable.
+*   The first line of all your Bash scripts should be exactly `#!/usr/bin/env bash`.
+*   The second line of all your Bash scripts should be a comment explaining what is the script doing.
 
 ## Project Description.
-
 Learn what is a server.
 Where servers usually live.
 What is SSH.
@@ -27,24 +44,23 @@ How to create an SSH RSA key pair.
 How to connect to a remote host using an SSH RSA key pair.
 The advantage of using `#!/usr/bin/env` bash instead of `/bin/bash`.
 
-- **0. Use a private key** - Write a Bash script that uses `ssh` to connect to your server using the private key `~/.ssh/school` with the user ubuntu. - `0-use_a_private_key`.
+
+* **0. Use a private key** - Write a Bash script that uses `ssh` to connect to your server using the private key `~/.ssh/school` with the user ubuntu. - `0-use_a_private_key`.
 
   Requirements:
 
-  - Only use ssh single-character flags.
-  - You cannot use `-l`.
-  - You do not need to handle the case of a private key protected by a passphrase.
-
+  * Only use ssh single-character flags.
+  * You cannot use `-l`.
+  * You do not need to handle the case of a private key protected by a passphrase.
   ```
   sylvain@ubuntu$ ./0-use_a_private_key
   ubuntu@server01:~$ exit
   Connection to 8.8.8.8 closed.
   sylvain@ubuntu$
   ```
-
 ---
 
-- **1. Create an SSH key pair** - Write a Bash script that creates an RSA key pair. - `1-create_ssh_key_pair`.
+* **1. Create an SSH key pair** - Write a Bash script that creates an RSA key pair. - `1-create_ssh_key_pair`.
   ```
   sylvain@ubuntu$ ls
   1-create_ssh_key_pair
@@ -68,12 +84,11 @@ The advantage of using `#!/usr/bin/env` bash instead of `/bin/bash`.
   +-----------------+
   sylvain@ubuntu$ ls
   1-create_ssh_key_pair school  school.pub
-  sylvain@ubuntu$
+  sylvain@ubuntu$ 
   ```
-
 ---
 
-- **2. Client configuration file** - Your machine has an SSH configuration file for the local SSH client, let’s configure it to our needs so that you can connect to a server without typing a password. Share your SSH client configuration in your answer file. - `2-ssh_config`.
+* **2. Client configuration file** - Your machine has an SSH configuration file for the local SSH client, let’s configure it to our needs so that you can connect to a server without typing a password. Share your SSH client configuration in your answer file. - `2-ssh_config`.
 
   ```
   sylvain@ubuntu$ ssh -v ubuntu@98.98.98.98
@@ -118,20 +133,17 @@ The advantage of using `#!/usr/bin/env` bash instead of `/bin/bash`.
   debug1: Sending env LANG = en_US.UTF-8
   ubuntu@magic-server:~$
   ```
-
 ---
 
-- **3. Let me in!** - Add the given SSH public key below to your server so that we can connect using the `ubuntu` user.
-
+* **3. Let me in!** - Add the given SSH public key below to your server so that we can connect using the `ubuntu` user.
 ---
 
-- **4. Client configuration file (w/ Puppet)** - Just as in the previous configuration file task, we’d like you to set up your client SSH configuration file so that you can connect to a server without typing a password. - `100-puppet_ssh_config.pp`.
+* **4. Client configuration file (w/ Puppet)** - Just as in the previous configuration file task, we’d like you to set up your client SSH configuration file so that you can connect to a server without typing a password. - `100-puppet_ssh_config.pp`.
 
   Requirements:
 
-  - Your SSH client configuration must be configured to use the private key `~/.ssh/school`.
-  - Your SSH client configuration must be configured to refuse to authenticate using a password.
-
+  * Your SSH client configuration must be configured to use the private key `~/.ssh/school`.
+  * Your SSH client configuration must be configured to refuse to authenticate using a password.
   ```
   vagrant@ubuntu:~$ sudo puppet apply 100-puppet_ssh_config.pp
   Notice: Compiled catalog for ubuntu-xenial in environment production in 0.11 seconds
@@ -140,9 +152,9 @@ The advantage of using `#!/usr/bin/env` bash instead of `/bin/bash`.
   Notice: Finished catalog run in 0.03 seconds
   vagrant@ubuntu:~$
   ```
-
 ---
+
 
 ## Collaborate
 
-To collaborate, reach me through my email address wendymunyasi@gmail.com.
+To collaborate, reach me through my email address damselpiccolo18@gmail.com.

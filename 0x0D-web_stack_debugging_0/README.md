@@ -1,32 +1,32 @@
 # Project Name.
-
 **0x0D. Web stack debugging #0**
 
 ## Author's Details.
+Name: *Florence Coker.*
 
-Name: Augustine Ogwu
+Email: *damselpiccolo18@gmail.com*
 
-Email: augustineug@gmail.com
+Tel:*+2348106314845.*
 
-## Requirements
+##  Requirements
 
-- Allowed editors: `vi`, `vim`, `emacs`.
-- All your files will be interpreted/compiled on Ubuntu 20.04 LTS.
-- All your files should end with a new line.
-- Your Puppet manifests must pass `puppet-lint` version 2.1.1 without any errors.
-- All your Bash script files must be executable.
-- Your Bash scripts must pass `Shellcheck` without any error.
-- The first line of all your Bash scripts should be exactly `#!/usr/bin/env bash`.
-- The second line of all your Bash scripts should be a comment explaining what is the script doing.
+*   Allowed editors: `vi`, `vim`, `emacs`.
+*   All your files will be interpreted/compiled on Ubuntu 20.04 LTS.
+*   All your files should end with a new line.
+*   Your Puppet manifests must pass `puppet-lint` version 2.1.1 without any errors.
+*   All your Bash script files must be executable.
+*   Your Bash scripts must pass `Shellcheck` without any error.
+*   The first line of all your Bash scripts should be exactly `#!/usr/bin/env bash`.
+*   The second line of all your Bash scripts should be a comment explaining what is the script doing.
+
 
 ## Project Description.
-
 Learn **DOCKER**.
 
-- **0. Give me a page!** - In this first debugging project, you will need to get `Apache` to run on the container and to return a page containing `Hello Holberton` when querying the root of it. - `0-use_a_private_key`.
+
+* **0. Give me a page!** - In this first debugging project, you will need to get `Apache` to run on the container and to return a page containing `Hello Holberton` when querying the root of it. - `0-use_a_private_key`.
 
   Example:
-
   ```
   vagrant@vagrant:~$ docker run -p 8080:80 -d -it holbertonschool/265-0
   47ca3994a4910bbc29d1d8925b1c70e1bdd799f5442040365a7cb9a0db218021
@@ -45,9 +45,9 @@ Learn **DOCKER**.
   Hello Holberton
   vagrant@vagrant:~$
   ```
-
 ---
+
 
 ## Collaborate
 
-To collaborate, reach me through my email address wendymunyasi@gmail.com.
+To collaborate, reach me through my email address damselpiccolo18@gmail.com.
