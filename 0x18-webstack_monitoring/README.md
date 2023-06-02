@@ -1,29 +1,30 @@
-# Project Name.
+# Webstack Monitoring
 
-**0x18. Webstack monitoring**
+![](https://miro.medium.com/v2/resize:fit:720/format:webp/1*x4vbUHv1njGYqVB_1O4Ipg.jpeg)
 
-## Author's Details.
+“You cannot fix or improve what you cannot measure” is a famous saying in the Tech industry. In the age of the data-ism, monitoring how our Software systems are doing is an important thing. In this project, we will implement one of many tools to measure what is going on our servers.
 
-Name: Augustine Ogwu
+Web stack monitoring can be broken down into 2 categories:
 
-Email: augustineug@gmail.com
+- Application monitoring: getting data about your running software and making sure it is behaving as expected
+- Server monitoring: getting data about your virtual or physical server and making sure they are not overloaded (could be CPU, memory, disk or network overload)
 
-## Requirements
+## Learning Objectives
 
-- Allowed editors: `vi`, `vim`, `emacs`.
-- All your files will be interpreted/compiled on Ubuntu 20.04 LTS.
-- All your files should end with a new line.
-- All your Bash script files must be executable.
-- Your Bash scripts must pass `Shellcheck` without any error.
-- The first line of all your Bash scripts should be exactly `#!/usr/bin/env bash`.
-- The second line of all your Bash scripts should be a comment explaining what is the script doing.
+- Why is monitoring needed
+- What are the 2 main area of monitoring
+- What are access logs for a web server (such as Nginx)
+- What are error logs for a web server (such as Nginx)
 
-## Project Description.
+## Project requirements
 
-- **0. Sign up for Datadog and install datadog-agent** - Install `datadog-agent`[(https://www.datadoghq.com/)] on `web-01`.
-- **1. Monitor some metrics** - Set up some monitors within the Datadog dashboard to monitor and alert you of a few.
-- **2. Create a dashboard** - create a dashboard with different metrics displayed in order to get a few different visualizations..
+- Allowed editors: vi, vim, emacs
+- All your files will be interpreted on Ubuntu 16.04 LTS
+- All your files should end with a new line
+- A README.md file, at the root of the folder of the project, is mandatory
+- All your Bash script files must be executable
+- Your Bash script must pass Shellcheck (version 0.3.7) without any error
+- The first line of all your Bash scripts should be exactly #!/usr/bin/env bash
+- The second line of all your Bash scripts should be a comment explaining what is the script doing
 
-## Collaborate
-
-To collaborate, reach me through my email address wendymunyasi@gmail.com.
+## Installation Guide
