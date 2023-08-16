@@ -1,36 +1,55 @@
-# Server Outage Incident report
-> By Florence Coker (florencecoker)
+Network Outage Incident at GapMatrix LTD
 
-![](https://t3.ftcdn.net/jpg/04/92/09/72/240_F_492097246_yagE8x9Uk8M9IekPy7GBuE0x1Uoa7esD.jpg)
+Incident Overview
 
-5th May 2023, we experienced server outage on all our server infrastructure which resulted in our clients inability to use our services and we sincerely apologize for the financial loss our clients have incurred during this period.
+On 10/10/2020 at exactly 3pm, GapMatrix LTD experienced a network outage that resulted in a disruption of services for our clients and users. This postmortem aims to provide an in-depth analysis of the incident, its causes, the response, and the steps taken to prevent similar occurrences in the future.
 
-## Issue Summary
-![](https://www.cienotes.com/wp-content/uploads/2019/07/summaryblackboard.jpg)
+Incident Timeline
 
-On 31st January 2023 (10am GMT + 1), we experienced a server outage (downtime) on all of our server infrastructure which lasted for 37 minutes. As a result of this, our clients experienced a http `500 error` which had a __100% impact__ on their business as they were unable to access our services. The root cause was not properly testing out all implemented upgrades before pushing to production servers.
+- 3:00pm: The incident began with a sudden drop in network connectivity, affecting all services hosted by GapMatrix LTD.
+- 3:05pm: The IT team was alerted to the issue through automated monitoring systems and user reports.
+- 3:06pm: Initial investigation began to identify the scope and cause of the outage.
+- 3:09: It was determined that the outage was widespread and impacting multiple data centers.
+- 3:10pm: Cross-functional teams were engaged to address the issue collaboratively.
+- 3:30pm: After thorough investigation, the root cause was identified.
+- 3:40pm: Mitigation strategies were implemented to restore services.
+- 3:50pm: Services were gradually restored for users.
+- 4:00pm: Incident was declared as resolved.
+- 4:00pm: Follow-up actions were initiated to prevent recurrence.
 
-## Timeline (all time in GMT + 1)
-![](https://www.ncbar.org/wp-content/uploads/2022/02/Timeline-Visual-300x145.png)
+Root Cause Analysis
 
-| Time (GMT + 1) | Actions |
-| -------------- | -------- |
-| 9:45 AM | Upgrades implementation begins |
-| 10:00AM | Server Outage begins |
-| 10:00AM | Pagers alerted on-call team |
-| 10:10AM | On-call team acknowledgement |
-| 10:15AM | Rollback initiation begins |
-| 10:20AM | Successful rollback|
-| 10:20AM | Server restart initiated|
-| 10:22AM | 100% of traffic back online |
+The network outage was traced back to a hardware failure in a core router at Data Center A. The failure cascaded to other network components, leading to widespread disruption. The exact cause of the router failure was determined to be a manufacturing defect that had gone unnoticed during regular maintenance checks. This defect eventually triggered a critical failure under the right conditions.
 
-## Root cause
-![](https://blog.systemsengineering.com/hs-fs/hubfs/blog-files/Root%20Cause.jpg?width=600&name=Root%20Cause.jpg)
+Response and Mitigation
 
-At 9:45am (GMT + 1) server upgrade was initiated across all our production servers without first releasing on our test environments and performing all necessary unit testing. Part of the upgrade been shipped to production server required an authentication from a 3rd party software, this new implementation is not supported on the current version present on our servers which resulted in the downtime experienced. We were able to resolve this quickly by first performing a rollback the severs previous state thereafter upgrading the current version on our servers.
+GapMatrix LTD's response to the network outage was swift and coordinated:
 
-## Preventive measures
-![](https://cdn-ccchn.nitrocdn.com/eoxXytShChgscESECFYcqdYPaOaOGMwn/assets/images/optimized/rev-fbc0c0e/wp-content/uploads/2021/06/prevent-incidents.png)
+1. Alert and Escalation: Automated monitoring systems promptly alerted the IT team. The incident was escalated to senior engineers and management.
 
-- Pushing all intended changes 1st to our test environments before shipping to life server.
-- Increase the performance metrics threshold to alert on-call engineers on the event of possible server crash 
+2. Communication: An internal communication channel was established to keep all teams informed about the incident's status and progress. Updates were also provided to clients and users through various communication channels.
+
+3. Isolation and Redundancy: Affected systems were isolated to prevent further disruption. Redundant routes were activated to reroute traffic around the failed components.
+
+4. Replacement and Restoration: The defective router was replaced with a spare, and affected network components were gradually restored to full functionality.
+
+5. Performance Testing: All systems were subjected to performance and stress testing before being fully brought back online to ensure stability.
+
+Preventive Measures
+
+To prevent similar incidents in the future, GapMatrix LTD has initiated the following measures:
+
+1. Enhanced Hardware Inspection: Regular and thorough hardware inspections will be conducted to identify potential defects early.
+
+2. Redundancy and Failover: Redundant network paths and failover mechanisms will be further optimized to ensure minimal disruption during a failure.
+
+3. Monitoring and Alerting: Monitoring systems will be refined to provide real-time alerts for anomalies and potential hardware issues.
+
+4. Emergency Response Plan: An updated and detailed emergency response plan will be established, including roles, responsibilities, and communication procedures.
+
+5. Vendor Collaboration: Collaboration with hardware vendors will be intensified to ensure timely identification of defects and efficient replacements.
+
+Conclusion
+
+The network outage incident at GapMatrix LTD was a wake-up call to the importance of rigorous hardware inspections and proactive measures to prevent disruptions. Through a collaborative response and analysis, the root cause was identified, and steps were taken to prevent a recurrence. The incident has reinforced our commitment to providing resilient and reliable services to our clients and users. We remain dedicated to continuously improving our infrastructure to ensure seamless operations and minimize the impact of future incidents.
+
