@@ -4,9 +4,7 @@
 
 sudo apt-get -y update
 sudo apt-get -y install nginx
-
-mkdir /etc/nginx/html
-touch /etc/nginx/html/index.html
+sudo apt-get -y upgrade
 
 echo 'Hello World!' > /etc/nginx/html/index.html
 sudo service nginx restart
