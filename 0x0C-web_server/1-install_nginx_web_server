@@ -11,7 +11,7 @@ ufw allow 'Nginx HTTP'
 mkdir /etc/nginx/html
 touch /etc/nginx/html/index.html
 
-echo "Hello World!" > /etc/nginx/html/index.html
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
 printf %s "server {
 	listen      80 default_server;
 	listen      [::]:80 default_server;
