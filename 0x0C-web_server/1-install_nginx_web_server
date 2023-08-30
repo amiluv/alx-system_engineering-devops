@@ -1,21 +1,8 @@
 #!/usr/bin/env bash
-# Installs Nginx with the following configurations:
-#    1) Listens on port 80.
-#    2) Returns a page containing "Hello World!" when queried
-#    3) At the root with a curl GET request.
+# installs nginx and configures it on a remote server
 
 apt-get -y update
 apt-get -y install nginx
 ufw allow 'Nginx HTTP'
-
-mkdir /etc/nginx/html
-touch /etc/nginx/html/index.html
-
-echo "Hello World!" > /var/www/html/index.nginx-debian.html
-printf %s "server {
-	listen      80 default_server;
-	listen      [::]:80 default_server;
-	root        /etc/nginx/html;
-	index       index.html index.htm;
-}" > /var/www/html/index.nginx-debian.html
-service nginx restart
+echo 'Hello World!' > /var/www/html/index.nginx-debian.html
+service nginx start
