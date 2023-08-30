@@ -4,8 +4,8 @@
 #    2) Returns a page containing "Hello World!" when queried
 #    3) At the root with a curl GET request.
 
-apt-get -y update
-apt-get -y install nginx
+sudo apt-get -y update
+sudo apt-get -y install nginx
 ufw allow 'Nginx HTTP'
 
 mkdir /etc/nginx/html
@@ -13,4 +13,4 @@ touch /etc/nginx/html/index.html
 
 echo "Hello World!" > /var/www/html/index.nginx-debian.html
 
-service nginx restart
+sudo service nginx restart
